@@ -1,26 +1,32 @@
-# coding=utf-8
-# AC笔记：函数返回布尔值
+# -*- coding:utf-8 -*-
+# 输入一个整数数组，判断该数组是不是某二叉搜索树的后序遍历的结果。
+# 如果是则输出Yes,否则输出No。假设输入的数组的任意两个数字都互不相同。
 
 
-class Solution():
+class Solution:
     def VerifySquenceOfBST(self, sequence):
-        length = len(sequence)
-        if length <= 0 or sequence == None:
+        if sequence is None or len(sequence) == 0:
             return False
-        root = sequence[len(sequence)-1]
-        for i in range(0, length):
-            if sequence[i] > root:  # 找到右子树最小节点，先序遍历也可以这样找
+
+        root = sequence[-1]
+        length = len(sequence)
+
+        for i in range(length):
+            if sequence[i] > root:  # 找到右子树最小节点
                 break
-        for j in range(i, length):
+
+        for j in range(i, length):  # 判断方法，就是大小关系
             if sequence[j] < root:
                 return False
+
         left = True
-        if i > 0:
-            left = self.VerifySquenceOfBST(sequence[:i])
         right = True
-        if i < length -1:
-            right = self.VerifySquenceOfBST(sequence[i:length-1])
-        if left == right and left == True:  # return left and right
-            return True
-        else:
-            return False
+
+        if i > 0:
+            left = self.VerifySquenceOfBST(sequence[0:i])
+        if i < length - 1:
+            right = self.VerifySquenceOfBST(sequence[i:length - 1])
+
+        return left and right
+
+        # write code here
