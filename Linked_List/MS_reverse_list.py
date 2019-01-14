@@ -4,9 +4,9 @@
 
 def ReverseList(self, pHead):
     node = pHead
-    if pHead is None or pHead.next is None:
-        return pHead  # 1
-    end_node = self.ReverseList(node.next) #2
-    node.next.next = node  # 3
-    node.next = None  # 4
-    return end_node  # 5
+    if pHead is None or pHead.next is None:  # 1
+        return pHead  # 2
+    end_node = self.ReverseList(node.next)  # 3
+    node.next.next = node  # 4
+    node.next = None  # 5
+    return end_node  # 6
