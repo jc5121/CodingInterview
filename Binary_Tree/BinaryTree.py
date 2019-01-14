@@ -1,5 +1,6 @@
 # -*-: coding: UTF-8 -*-
-
+# 重构二叉树
+# 4种遍历
 class TreeNode:
     def __init__(self, data):
         self.data = data
