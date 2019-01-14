@@ -107,7 +107,7 @@ if __name__ == '__main__':
 
     for i in preList:
         print (i.data)
-        
+
     for i in inList:
         print (i.data)
 

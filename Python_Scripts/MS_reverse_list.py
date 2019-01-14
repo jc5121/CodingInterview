@@ -5,8 +5,8 @@
 def ReverseList(self, pHead):
     node = pHead
     if pHead is None or pHead.next is None:
-        return pHead
+        return pHead  # 1
     end_node = self.ReverseList(node.next)
-    node.next.next = node
-    node.next = None
-    return end_node
+    node.next.next = node  # 2
+    node.next = None  # 3
+    return end_node  # 4
