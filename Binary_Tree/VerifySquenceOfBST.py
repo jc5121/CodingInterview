@@ -3,28 +3,28 @@
 # 如果是则输出Yes,否则输出No。假设输入的数组的任意两个数字都互不相同。
 
 
-def VerifySquenceOfBST(squence):
-    if squence is None:
+def VerifySequenceOfBST(sequence):
+    if sequence is None:
         return False
 
-    root = squence[-1]
-    length = len(squence)
+    root = sequence[-1]
+    length = len(sequence)
 
     for i in range(length):
-        if squence[i] > root:  # 找到右子树最小节点
+        if sequence[i] > root:  # 找到右子树最小节点
             break
 
     for j in range(i, length):
-        if squence[j] < root:
+        if sequence[j] < root:
             return False
 
     left = True
     right = True
 
     if i > 0:
-        left = VerifySquenceOfBST(squence[0:i])
+        left = VerifySequenceOfBST(sequence[0:i])
     if i < length - 1:
-        right = VerifySquenceOfBST(squence[i:length-1])
+        right = VerifySequenceOfBST(sequence[i:length-1])
 
     return left and right
 
