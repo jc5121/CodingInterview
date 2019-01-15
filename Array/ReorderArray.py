@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 # 基于交换无法保证相对顺序不变
+# 改变原数组中数的顺序，奇数在前，偶数在后
 
 
 def reOrderArray(array):

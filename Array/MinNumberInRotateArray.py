@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+# 旋转数组中的最小数字
 
 
 def minNumberInRotateArray(rotateArray):

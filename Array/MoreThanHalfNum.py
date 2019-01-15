@@ -1,8 +1,9 @@
 # -*- coding:utf-8 -*-
+# 数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。
 
 
 class Solution:
-    
+
     def MoreThanHalfNum(self, numbers):
 
         numbers.sort()  # 先排序

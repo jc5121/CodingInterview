@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-# array 二维列表
+# array 二维列表，部分排序，找到target
 
 
 def Find(target, array):
