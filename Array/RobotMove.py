@@ -25,7 +25,7 @@ class Solution:
                    +self.CountNumber(threshold, rows, cols-1, data)\
                    +self.CountNumber(threshold, rows+1, cols, data)\
                    +self.CountNumber(threshold, rows, cols+1, data)
-        
+
     def sum(self, number):
         result = 0
         while number != 0:
