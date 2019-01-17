@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+# 删除链表中重复的节点
 
 
 class ListNode:
@@ -12,13 +13,14 @@ class Solution:
         # write code here
         if pHead == None:
             return None
-        pResHead = ListNode(pHead.val - 1)
-        tempResHead = pResHead
+        # 增加头部
+        pResHead = ListNode(pHead.val - 1)  # 返回的链表头
+        tempResHead = pResHead  # 用来记录当前最后一个不重复的node
         same = pHead.val - 1
-        p = pHead
+        p = pHead  # 当前node
         while p != None:
             if p.val == same:
-                pass
+                pass  # 不用直接删除，先往后走就可以
                 p = p.next
             else:
                 same = p.val

@@ -4,6 +4,7 @@
 #         self.val = x
 #         self.left = None
 #         self.right = None
+# BST 先中序遍历转化为数组，再转化为双向链表
 
 
 class Solution:

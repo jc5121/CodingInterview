@@ -3,18 +3,18 @@
 import numpy as np
 
 
-def merge(lyst, copyBuffer, low, middle, high):
+def merge(lyst, copyBuffer, low, mid, high):
     i = low
-    j = middle + 1
+    j = mid + 1
 
     for k in range(low, high + 1):
-        if i > middle:
+        if i > mid:  # 左边用尽
             copyBuffer[k] = lyst[j]
             j += 1
-        elif j > high:  # 必须是elif
+        elif j > high:  # 必须是elif 右边用尽
             copyBuffer[k] = lyst[i]
             i += 1
-        elif lyst[i] < lyst[j]:
+        elif lyst[i] < lyst[j]:  
             copyBuffer[k] = lyst[i]
             i += 1
         else:

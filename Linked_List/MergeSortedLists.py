@@ -4,6 +4,7 @@
 #         self.val = x
 #         self.next = None
 # 合并两个排好序的链表
+# 条件考虑完备
 
 
 class Solution:
