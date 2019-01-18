@@ -11,11 +11,11 @@ def VerifySequenceOfBST(sequence):
     length = len(sequence)
 
     for i in range(length):
-        if sequence[i] > root:  # 找到右子树最小节点
+        if sequence[i] > root:  # 1.找到右子树最小节点
             break
 
     for j in range(i, length):
-        if sequence[j] < root:
+        if sequence[j] < root:  # 2.右子树所有节点都应该比它大
             return False
 
     left = True
@@ -28,7 +28,3 @@ def VerifySequenceOfBST(sequence):
 
     return left and right
 
-
-a = []  # not None why ?
-if a is not None:
-    print 'd'

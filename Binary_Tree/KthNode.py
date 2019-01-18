@@ -12,7 +12,6 @@ class TreeNode:
 class Solution:
     # 返回对应节点TreeNode
     def KthNode(self, pRoot, k):
-                # write code here
         if pRoot is None or k <= 0:
             return
         root = []  # 没用递归，用的栈结构进行中序遍历

@@ -1,4 +1,7 @@
 # -*- coding:utf-8 -*-
+# 正字表达时中. * 代码的全面性
+
+
 class Solution:
     # s, pattern都是字符串
     def match(self, s, pattern):

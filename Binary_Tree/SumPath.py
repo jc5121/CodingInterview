@@ -7,10 +7,10 @@ class Solution:
 
     # 返回二维列表，内部每个列表表示找到的路径
     def FindPath(self, root, expectNumber):
-        # write code here
+        # 注意这三个参数的传递方式，有点像作为全局变量来用的。
         result = []
-        route = []
-        currentsum = 0  # 注意这三个参数的传递方式，有点像作为全局变量来用的。
+        route = []  # 维护当前路径
+        currentsum = 0  # 当前和
         if root is None:
             return result
         result = self.Path(root, expectNumber, route, currentsum, result)
@@ -18,12 +18,12 @@ class Solution:
 
     def Path(self, root, expectNumber, route, currentsum, result):
         currentsum += root.val
-        route.append(root)
+        route.append(root)  # 只append一次
         # 如果是叶子结点，存入result
         isleaf = (root.left == None and root.right == None)
         if currentsum == expectNumber and isleaf:
             onepath = []
-            for node in route:
+            for node in route:  # 若满足条件，则添加至result
                 onepath.append(node.val)
             result.append(onepath)
         # 如果不是叶子结点，则遍历它的子结点

@@ -9,7 +9,7 @@ class Solution:
         return a * b
 
     def multiply(self, A):
-        # write code here
+
         if not A:
             return
         A1, B = [], []
@@ -18,5 +18,3 @@ class Solution:
             A1 = A[:i] + A[i + 1:]
             B.append(reduce(self.mul, A1))
         return B
-
-        # write code here

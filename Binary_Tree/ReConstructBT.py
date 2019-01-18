@@ -84,7 +84,7 @@ class Solution:
         if set(pre) != set(tin):
             return None
 
-        root = TreeNode(pre[0])
+        root = TreeNode(pre[0])  # 每次确定一个节点
         i = tin.index(pre[0])
         # 先序像快排 [0] = pivot
         # 中序像归并 [i] = mid
@@ -93,27 +93,3 @@ class Solution:
         return root
 
 
-if __name__ == '__main__':
-    pre = [1, 2, 4, 7, 3, 5, 6, 8]
-    tin = [4, 7, 2, 1, 5, 3, 6, 8]
-    test = Solution()
-    newTree = test.reConstructBinaryTree(pre, tin)
-    preList = test.preorder([], newTree)
-    inList = test.inorder([], newTree)
-    postList = test.postorder([], newTree)
-
-    newTree = test.add_node(10, newTree)
-    # print (newTree)
-    traList = test.traverse([], newTree)
-
-    for i in preList:
-        print (i.data)
-
-    for i in inList:
-        print (i.data)
-
-    for i in postList:
-        print (i.data)
-
-    for i in traList:
-        print (i.data)
