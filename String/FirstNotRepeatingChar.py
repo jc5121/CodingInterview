@@ -18,10 +18,11 @@ class Solution:
                 temp[s[i]] += 1
             else:
                 temp[s[i]] = 1
+
             if temp[s[i]] == 1:
-                temp1[s[i]] = i
+                temp1[s[i]] = i  # 存位置
             elif temp1.has_key(s[i]):
-                del temp1[s[i]]
+                del temp1[s[i]]  # 删除
         result = len(s)
         for key in temp1:
             if temp1[key] <= result:

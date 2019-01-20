@@ -14,6 +14,8 @@ class Solution:
     def Mirror(self, root):
         if root is None:
             return None
+
+        # 先交换 再递归，属于先序遍历
         root_left = root.left
         root.left = root.right
         root.right = root_left

@@ -11,5 +11,5 @@ class Solution:
         i = 0
         while len(array) > 1:
             remainder = (m-1) % len(array)
-            array = array[remainder+1:] + array[:remainder]
+            array = array[remainder+1:] + array[:remainder]  # 这一步的效率可能不高
         return array[0]

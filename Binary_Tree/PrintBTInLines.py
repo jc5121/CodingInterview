@@ -23,7 +23,7 @@ class Solution:
         while not q.empty():
             level = []
             length = q.qsize()
-            for i in range(length):
+            for i in range(length):  # 把当前队列全部输出，作为一行
                 p = q.get()
                 level.append(p.val)
                 if p.left != None:

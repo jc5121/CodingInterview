@@ -9,7 +9,7 @@ class Solution:
     def FindPath(self, root, expectNumber):
         # 注意这三个参数的传递方式，有点像作为全局变量来用的。
         result = []
-        route = []  # 维护当前路径
+        route = []  # 维护当前路径 栈
         currentsum = 0  # 当前和
         if root is None:
             return result

@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 # 删除链表中重复的节点
+# 这种题我为什么反而觉得难？
 
 
 class ListNode:

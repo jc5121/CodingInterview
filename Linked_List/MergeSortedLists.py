@@ -5,6 +5,7 @@
 #         self.next = None
 # 合并两个排好序的链表
 # 条件考虑完备
+# 也是理解容易，实现起来觉得难
 
 
 class Solution:

@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+# 给定一个压入序列和压出序列，判断是不是
 
 
 class Solution:

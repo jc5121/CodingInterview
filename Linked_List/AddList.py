@@ -3,6 +3,8 @@
 # 数字存储按照在原来整数中相反的顺序，使得第一个数字位于链表的开头。
 # 写出一个函数将两个整数相加，用链表形式返回和。
 
+# 如果是按原顺序存放，可以使用一个栈，计算当前sum和carry，放入另一个栈，再组成链表。
+
 
 # Definition for singly-linked list.
 class ListNode:

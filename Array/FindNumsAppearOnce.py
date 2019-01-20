@@ -14,7 +14,7 @@ class Solution:
         for i in range(length):
             resultExclusiveOR ^= array[i]
         indexOf1 = 0
-        while resultExclusiveOR & 1 != 1:  # 确定与或结果中1的位置
+        while resultExclusiveOR & 1 != 1:  # 确定与或结果中最靠左的1的位置 eg：00 1 010100 & 00000001
             resultExclusiveOR = resultExclusiveOR >> 1
             indexOf1 += 1
         data1 = 0

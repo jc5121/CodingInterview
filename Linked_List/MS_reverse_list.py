@@ -1,5 +1,6 @@
 # coding: utf-8
 # 递归实现链表反转
+# 调整当前节点的下一个节点的next 与三节点反转不同
 
 
 def ReverseList(pHead):

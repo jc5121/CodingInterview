@@ -1,5 +1,6 @@
 # coding: utf-8
 # 三节点反转链表
+# 调整当前节点的next
 
 
 def ReverseList(pHead):

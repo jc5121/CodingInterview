@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 # 正字表达时中. * 代码的全面性
-
+# 还有递归
 
 class Solution:
     # s, pattern都是字符串
@@ -20,7 +20,7 @@ class Solution:
             return False
         if len(pattern) > 1 and pattern[1] == '*':
             if s:
-                if pattern[0] == s[0] or pattern[0] == '.' :
+                if pattern[0] == s[0] or pattern[0] == '.':
                     return self.matchCore(s[1:], pattern[2:]) or self.matchCore(s[1:], pattern) or self.matchCore(s, pattern[2:])
                 else:
                     return self.matchCore(s, pattern[2:])

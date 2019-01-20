@@ -21,32 +21,32 @@ class Solution:
         if start > end:
             return -1
         length = len(data)
-        mideleIndex = (start + end) / 2
-        mideleData = data[mideleIndex]
-        if mideleData == k:
-            if (mideleIndex < length -1 and data[mideleIndex-1] != k) or mideleIndex == 0:
-                return mideleIndex
+        midIndex = (start + end) / 2
+        mideData = data[midIndex]
+        if mideData == k:
+            if (midIndex < length - 1 and data[midIndex-1] != k) or midIndex == 0:
+                return midIndex
             else:
-                end = mideleIndex - 1
-        elif mideleData < k:
-            start = mideleIndex + 1
+                end = midIndex - 1  # 这里决定了是找开头的k
+        elif mideData < k:
+            start = midIndex + 1
         else:
-            end = mideleIndex - 1
+            end = midIndex - 1
         return self.GetFirstK(data, k, start, end)
 
     def GetLastK(self, data, k, start, end):
         if start > end:
             return -1
         length = len(data)
-        mideleIndex = (start + end) / 2
-        mideleData = data[mideleIndex]
-        if mideleData == k:
-            if (mideleIndex < length -1 and data[mideleIndex+1] != k) or mideleIndex == length-1:
-                return mideleIndex
+        midIndex = (start + end) / 2
+        midData = data[midIndex]
+        if midData == k:
+            if (midIndex < length - 1 and data[midIndex+1] != k) or midIndex == length-1:
+                return midIndex
             else:
-                start = mideleIndex + 1
-        elif mideleData < k:
-            start = mideleIndex + 1
+                start = midIndex + 1  # 这里决定了是找末尾的k
+        elif midData < k:
+            start = midIndex + 1
         else:
-            end = mideleIndex - 1
+            end = midIndex - 1
         return self.GetLastK(data, k, start, end)

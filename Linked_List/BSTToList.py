@@ -4,6 +4,7 @@
 #         self.val = x
 #         self.left = None
 #         self.right = None
+# 题目： BST -> 双向链表，可以数出来连接数是少了2的
 # BST 先中序遍历转化为数组，再转化为双向链表
 
 

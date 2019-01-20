@@ -85,7 +85,7 @@ class Solution:
             return None
 
         root = TreeNode(pre[0])  # 每次确定一个节点
-        i = tin.index(pre[0])
+        i = tin.index(pre[0])  # .index()
         # 先序像快排 [0] = pivot
         # 中序像归并 [i] = mid
         root.left = self.reConstructBinaryTree(pre[1:i+1], tin[:i])

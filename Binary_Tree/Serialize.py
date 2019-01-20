@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 # 序列化和反序列化二叉树
+# tree -> list
 
 
 class TreeNode:

@@ -9,7 +9,7 @@ class Solution:
         if not num:
             return []
         # 如果滑动窗口的大小大于数组的大小，或者 size 小于 0，则返回 []
-        if size > len(num) or size <1:
+        if size > len(num) or size < 1:
             return []
 
         # 如果滑动窗口的大小为 1 ，则直接返回原始数组
