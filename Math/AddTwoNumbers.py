@@ -6,8 +6,8 @@
 # 这种做法c++可以 python不行，这事为啥
 def Add(num1, num2):
     while num2 != 0:
-        add_sum = num1 ^ num2
-        num2 = (num1 & num2) << 1  # 处理进位
+        add_sum = num1 ^ num2  #　异或处理不进位的加法
+        num2 = (num1 & num2) << 1  # 与处理进位
         num1 = add_sum
     return num1
 
