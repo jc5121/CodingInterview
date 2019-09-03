@@ -11,20 +11,22 @@ class Solution:
         p1 = pHead1
         p2 = pHead2
 
-        # 此时p1,p2中有一个还没走完，剩下的就是它俩相差的
+        # 此时p1,p2中有一个还没走完，剩下的就是它俩相差的n
         while p1.next and p2.next:
             p1 = p1.next
             p2 = p2.next
         temphead1 = pHead1
         temphead2 = pHead2
 
-        # 先走了n步
+        # 这次长的先走了n步
         while p1.next:
             temphead1 = temphead1.next
             p1 = p1.next
         while p2.next:
             temphead2 = temphead2.next
             p2 = p2.next
+            
+        # 短的也出发，相同时即相遇在入口
         while temphead1:
             if temphead1 == temphead2:
                 return temphead1
