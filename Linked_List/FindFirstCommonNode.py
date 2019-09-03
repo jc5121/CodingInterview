@@ -11,7 +11,7 @@ class Solution:
         p1 = pHead1
         p2 = pHead2
 
-        # 此时p1,p2中有一个还没走完
+        # 此时p1,p2中有一个还没走完，剩下的就是它俩相差的
         while p1.next and p2.next:
             p1 = p1.next
             p2 = p2.next
