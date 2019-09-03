@@ -17,7 +17,7 @@ class Solution:
         tempresult = [1]  # 作为队列，记录当前序列
         while small < middle:
             if sum(tempresult) == tsum:
-                temp = tempresult[:]
+                temp = tempresult[:]　# 切片了就会生成新的对象，而不是在原对象上操作
                 result.append(temp)
                 tempresult.append(big)
                 big += 1
