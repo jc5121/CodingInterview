@@ -15,7 +15,7 @@ class Solution:
         pMergeHead = pHead1
         while pHead1 and pHead2:
             if pHead1.val <= pHead2.val:
-                if pHead1.next and pHead1.next.val >= pHead2.val:  # 条件考虑完备
+                if pHead1.next and pHead1.next.val >= pHead2.val:  # 条件考虑完备，只有这种情况才合并，以后可以从这个角度考虑
                     pHead1_next = pHead1.next
                     pHead2_next = pHead2.next
                     pHead1.next = pHead2
