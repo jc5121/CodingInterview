@@ -7,5 +7,6 @@ def deleteNode(pToBeDeleted):
     if pToBeDeleted.next is None:
         pToBeDeleted = None
     else:
+        # 1. 拷贝 2. 删除
         pToBeDeleted.val = pToBeDeleted.next.val
         pToBeDeleted.next = pToBeDeleted.next.next
