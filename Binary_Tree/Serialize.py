@@ -15,7 +15,7 @@ class Solution:
 
     def Serialize(self, root):
         if root is not None:
-            # 层次遍历
+            # 层次遍历，应该是先序
             return [root.val] + self.Serialize(root.left) + self.Serialize(root.right)
         else: return ['#']
 
